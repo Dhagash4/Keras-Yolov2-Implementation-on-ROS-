@@ -1,0 +1,36 @@
+{
+    "model" : {
+        "backend":              "Tiny Yolo",
+        "input_size":           416,
+        "anchors":              [0.69,1.09, 1.19,1.62, 1.89,2.78, 2.77,4.00, 4.14,5.24],
+        "max_box_per_image":    10,        
+        "labels":               ["Car","Mini-Truck","Person"]
+    },
+
+    "train": {
+        "train_image_folder":   "D:/FLUX/DL Team/1.keras-yolo2/March26/frames/",
+        "train_annot_folder":   "D:/FLUX/DL Team/1.keras-yolo2/March26/anno/",     
+          
+        "train_times":          15,
+        "pretrained_weights":   "",
+        "batch_size":           32,
+        "learning_rate":        1e-4,
+        "nb_epochs":            10,
+        "warmup_epochs":        3,
+
+        "object_scale":         5.0 ,
+        "no_object_scale":      1.0,
+        "coord_scale":          1.0,
+        "class_scale":          1.0,
+
+        "saved_weights_name":   "tiny_yolo_flux.h5",
+        "debug":                false
+    },
+
+    "valid": {
+        "valid_image_folder":   "",
+        "valid_annot_folder":   "",
+
+        "valid_times":          1
+    }
+}
