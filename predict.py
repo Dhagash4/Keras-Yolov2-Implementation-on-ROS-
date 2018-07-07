@@ -17,14 +17,6 @@ import livepredictclass
 
 n = True
 
-os.environ["CUDA_DEVICE_ORDER"]="PCI_BUS_ID"
-os.environ["CUDA_VISIBLE_DEVICES"]="0"
-config_path = "/home/dhagash/flux_ws/src/sample_opencv_pkg/keras-yolo/config.json"
-weights_path = "/home/dhagash/flux_ws/src/sample_opencv_pkg/keras-yolo/tiny_yolo_flux.h5"
-
-with open(config_path) as config_buffer:
-		config = json.load(config_buffer)
-
 class final():
 	
 	def __init__(self):
@@ -49,8 +41,8 @@ class final():
 		
 		if n == True:
 
-			abc = livepredictclass.getBoxes(config_path="/home/dhagash/flux_ws/src/sample_opencv_pkg/keras-yolo/config.json", 
-							weights_path="/home/dhagash/flux_ws/src/sample_opencv_pkg/keras-yolo/tiny_yolo_all.h5")
+			abc = livepredictclass.getBoxes(config_path="/home/dhagash/catkin_ws/src/predict_opencv_pkg/keras-yolo/config.json", 
+							weights_path="/home/dhagash/catkin_ws/src/predict_opencv_pkg/keras-yolo/tiny_yolo_all.h5")
 
 	
 			
